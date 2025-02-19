@@ -1,11 +1,10 @@
 import { useState } from 'react';
 
 
-function Calculator(){
-    let income = 0;
+function Calculator({income}){
 
     function handleTextChange(e){
-        income = "incomeInput";
+        income = e.target.value;
         console.log(income);
     }
     return (
