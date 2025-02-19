@@ -1,7 +1,13 @@
+import { useState } from 'react';
 
 
 function Calculator(){
+    let income = 0;
 
+    function handleTextChange(e){
+        income = "incomeInput";
+        console.log(income);
+    }
     return (
         <>
         <label for="incomeInterval">How often do you get paid</label>
@@ -12,7 +18,9 @@ function Calculator(){
             <option value = "semiAnnually"> Semi-Annually </option>
             <option value = "annually"> Annually </option>
         </select>
-        <input name="income" />
+        <input name = "incomeInput" onChange={handleTextChange} />
+
+
         </>
     )
 }
