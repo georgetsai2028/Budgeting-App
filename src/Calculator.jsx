@@ -1,12 +1,13 @@
 import { useState } from "react";
 
-function Calculator({income}){
-const [budget, setBudget] = useState({ needs: 0, wants: 0, savings: 0});
+function Calculator(){//deleted income prop
+const [budget, setBudget] = useState({ income: e.target.value, needs: 0, wants: 0, savings: 0});
 
 
     function calculations(e){ 
         setBudget({
-        income = e.target.value
+        ...budget,
+        income: e.target.value,
         needs: (income * .5),
         wants: (income * .3),
         savings: (income * .2)
