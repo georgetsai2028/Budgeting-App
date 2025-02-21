@@ -1,6 +1,6 @@
 import { useState } from "react";
 
-function Calculator(income){//deleted income prop
+function Calculator({income}){//deleted income prop
 const [budget, setBudget] = useState({ needs: 0, wants: 0, savings: 0});
 
     function captureValue(e){
