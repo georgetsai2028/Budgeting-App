@@ -8,19 +8,23 @@ const [budget, setBudget] = useState({ needs: 0, wants: 0, savings: 0});
         
     };
 
+    function resetDisplay()
+    {
+
+    }
+
     function Calculations(){ 
         setBudget({
-        ...budget,
-        needs: (budget * .5),
-        wants: (budget * .3),
-        savings: (budget * .2)
+        needs: (income * .5),
+        wants: (income * .3),
+        savings: (income * .2),
     });
    }
     
 
     return (
         <>
-        <label for="incomeInterval">How often do you get paid</label>
+        <h1>How often do you get paid</h1>
         <select className ="incomeInterval">
             <option value = "weekly"> Weekly </option>
             <option value = "biWeekly"> Every two weeks</option>
@@ -30,6 +34,9 @@ const [budget, setBudget] = useState({ needs: 0, wants: 0, savings: 0});
         </select>
         <input value = {income} type= "number" onChange={captureValue} />
         <button onClick = {Calculations}>Calculate</button>
+        <p>Needs: ${budget.needs.toFixed(2)}</p>
+        <p>Wants: ${budget.wants.toFixed(2)}</p>
+        <p>Savings: ${budget.savings.toFixed(2)}</p>
 
 
         </>
