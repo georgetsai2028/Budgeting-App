@@ -1,4 +1,5 @@
 import { useState } from "react";
+import PieChart from "./PieChart";
 
 function Calculator({income}){//deleted income prop
 const [budget, setBudget] = useState({ needs: 0, wants: 0, savings: 0});
@@ -37,6 +38,7 @@ const [budget, setBudget] = useState({ needs: 0, wants: 0, savings: 0});
         <p>Needs: ${budget.needs.toFixed(2)}</p>
         <p>Wants: ${budget.wants.toFixed(2)}</p>
         <p>Savings: ${budget.savings.toFixed(2)}</p>
+
 
 
         </>
