@@ -1,5 +1,6 @@
 import { useState } from "react";
 import {PieChart} from './PieChart.jsx'
+import './Calculator.css'
 
 export function Calculator({income}){//deleted income prop
 const [budget, setBudget] = useState({ needs: 0, wants: 0, savings: 0});
@@ -35,6 +36,7 @@ const [budget, setBudget] = useState({ needs: 0, wants: 0, savings: 0});
 
     return (
         <>
+        <div className="mainContainer">
         <h1>How often do you get paid</h1>
         <select className ="incomeInterval">
             <option value = "weekly"> Weekly </option>
@@ -52,6 +54,7 @@ const [budget, setBudget] = useState({ needs: 0, wants: 0, savings: 0});
         <p>Savings: ${budget.savings.toFixed(2)}</p>
 
         <PieChart budget={budget} />
+        </div>
         </>
     )
 }
