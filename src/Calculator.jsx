@@ -1,7 +1,6 @@
 import { useState } from "react";
-import PieChart from "./PieChart";
 
-function Calculator({income}){//deleted income prop
+export function Calculator({income}){//deleted income prop
 const [budget, setBudget] = useState({ needs: 0, wants: 0, savings: 0});
 
     function captureValue(e){
@@ -9,7 +8,7 @@ const [budget, setBudget] = useState({ needs: 0, wants: 0, savings: 0});
         
     };
 
-    function resetDisplay()
+   /* function resetDisplay()
     {
         if (isNaN(Number(income))){
         return(
@@ -20,6 +19,7 @@ const [budget, setBudget] = useState({ needs: 0, wants: 0, savings: 0});
         }));
     }
     }
+    */
 
     function Calculations(){ 
         setBudget({
@@ -27,6 +27,16 @@ const [budget, setBudget] = useState({ needs: 0, wants: 0, savings: 0});
         wants: (income * .3),
         savings: (income * .2),
     });
+   }
+
+   function RenderPie(){
+          
+    {budget ? (
+        <div style={({ width: 600})}>
+            <PieChart budget={budget} />
+        </div>
+        ) : null}
+
    }
     
 
@@ -42,15 +52,9 @@ const [budget, setBudget] = useState({ needs: 0, wants: 0, savings: 0});
         </select>
         <input value = {income} type= "number" onChange={captureValue} />
         <button onClick = {Calculations}>Calculate</button>
-        <resetDisplay />
         <p>Needs: ${budget.needs.toFixed(2)}</p>
         <p>Wants: ${budget.wants.toFixed(2)}</p>
         <p>Savings: ${budget.savings.toFixed(2)}</p>
-
-
-
         </>
     )
 }
-    
-export default Calculator;
