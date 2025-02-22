@@ -8,8 +8,8 @@ export function PieChart({budget}) {
   labels: Object.keys(budget),
   datasets: [
     {
-      label: Object.values(budget),
-      data: [12, 19, 3, 5, 2, 3],
+      data: Object.values(budget),
+      label: ["Needs", "Wants", "Savings"],
       backgroundColor: [
         'rgba(255, 99, 132, 0.2)',
         'rgba(54, 162, 235, 0.2)',

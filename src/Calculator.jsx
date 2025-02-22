@@ -2,7 +2,7 @@ import { useState } from "react";
 import {PieChart} from './PieChart.jsx'
 
 export function Calculator({income}){//deleted income prop
-const [budget, setBudget] = useState({ needs: 0, wants: 0, savings: 0});
+const [budget, setBudget] = useState({ Needs: 0, Wants: 0, Savings: 0});
 
     function captureValue(e){
         income = e.target.value
@@ -24,19 +24,10 @@ const [budget, setBudget] = useState({ needs: 0, wants: 0, savings: 0});
 
     function Calculations(){ 
         setBudget({
-        needs: (income * .5),
-        wants: (income * .3),
-        savings: (income * .2),
+        Needs: (income * .5),
+        Wants: (income * .3),
+        Savings: (income * .2),
     });
-   }
-
-   function RenderPie(){
-          
-    {budget ? (
-        <div style={({ width: 600})}>
-            <PieChart budget={budget} />
-        </div>
-        ) : null}
 
    }
 
@@ -54,10 +45,13 @@ const [budget, setBudget] = useState({ needs: 0, wants: 0, savings: 0});
         </select>
         <input value = {income} type= "number" onChange={captureValue} />
         <button onClick = {Calculations}>Calculate</button>
-        <p>Needs: ${budget.needs.toFixed(2)}</p>
-        <p>Wants: ${budget.wants.toFixed(2)}</p>
-        <p>Savings: ${budget.savings.toFixed(2)}</p>
-        <PieChart />
+        <h2>Budget Breakdown</h2>
+
+        <p>Needs: ${budget.Needs.toFixed(2)}</p>
+        <p>Wants: ${budget.Wants.toFixed(2)}</p>
+        <p>Savings: ${budget.Savings.toFixed(2)}</p>
+
+        <PieChart budget={budget} />
         </>
     )
 }
