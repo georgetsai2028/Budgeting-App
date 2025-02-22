@@ -5,20 +5,20 @@ ChartJS.register(ArcElement, Tooltip, Legend);
 
 export function PieChart({budget}) {
  const data = {
-  labels: Object.keys(budget),
+  labels: ["Needs", "Wants", "Savings"],
   datasets: [
     {
       data: Object.values(budget),
-      label: ["Needs", "Wants", "Savings"],
+
       backgroundColor: [
         'rgba(255, 99, 132, 0.2)',
         'rgba(54, 162, 235, 0.2)',
-        'rgba(255, 206, 86, 0.2)',
+        'rgba(0, 187, 31, 0.2)',
       ],
       borderColor: [
         'rgba(255, 99, 132, 1)',
         'rgba(54, 162, 235, 1)',
-        'rgba(75, 192, 192, 1)',
+        'rgb(8, 168, 40)',
       ],
       borderWidth: 1,
     },
