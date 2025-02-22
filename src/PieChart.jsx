@@ -1,11 +1,12 @@
 import { Chart as ChartJS, ArcElement, Tooltip, Legend } from "chart.js";
-import { Doughnut } from "react-chartjs-2";
+import { Pie } from "react-chartjs-2";
 
 ChartJS.register(ArcElement, Tooltip, Legend);
 
-function PieChart() {
+export function PieChart() {
+ const budgetNames = ['Needs', 'Wants', 'Savings']
  const data = {
-  labels: ['Red', 'Blue', 'Yellow', 'Green', 'Purple', 'Orange'],
+  labels: budgetNames.map((b) => b.name),
   datasets: [
     {
       label: '# of Votes',
