@@ -11,7 +11,14 @@ const [budget, setBudget] = useState({ needs: 0, wants: 0, savings: 0});
 
     function resetDisplay()
     {
-
+        if (isNaN(Number(income))){
+        return(
+        setBudget({
+            needs: 0.00,
+            wants: 0.00,
+            savings: 0.00,
+        }));
+    }
     }
 
     function Calculations(){ 
@@ -35,6 +42,7 @@ const [budget, setBudget] = useState({ needs: 0, wants: 0, savings: 0});
         </select>
         <input value = {income} type= "number" onChange={captureValue} />
         <button onClick = {Calculations}>Calculate</button>
+        <resetDisplay />
         <p>Needs: ${budget.needs.toFixed(2)}</p>
         <p>Wants: ${budget.wants.toFixed(2)}</p>
         <p>Savings: ${budget.savings.toFixed(2)}</p>
