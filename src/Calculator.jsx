@@ -3,7 +3,7 @@ import {PieChart} from './PieChart.jsx'
 
 export function Calculator({income}){//deleted income prop
 const [budget, setBudget] = useState({ needs: 0, wants: 0, savings: 0});
-const budgetNames = ['Needs', 'Wants', 'Savings'];
+
     function captureValue(e){
         income = e.target.value
         
@@ -39,7 +39,8 @@ const budgetNames = ['Needs', 'Wants', 'Savings'];
         ) : null}
 
    }
-    
+
+   
 
     return (
         <>
