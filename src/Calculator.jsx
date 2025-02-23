@@ -2,26 +2,13 @@ import { useState } from "react";
 import {PieChart} from './PieChart.jsx'
 import './Calculator.css'
 
-export function Calculator({income}){//deleted income prop
+export function Calculator({income}){
 const [budget, setBudget] = useState({ needs: 0, wants: 0, savings: 0});
 
     function captureValue(e){
         income = e.target.value
         
     };
-
-   /* function resetDisplay()
-    {
-        if (isNaN(Number(income))){
-        return(
-        setBudget({
-            needs: 0.00,
-            wants: 0.00,
-            savings: 0.00,
-        }));
-    }
-    }
-    */
 
     function Calculations(){ 
         setBudget({
@@ -32,8 +19,8 @@ const [budget, setBudget] = useState({ needs: 0, wants: 0, savings: 0});
 
    }
 
-   
 
+   
     return (
         <>
         <div className="mainContainer">
