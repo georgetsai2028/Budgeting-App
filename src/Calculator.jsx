@@ -1,5 +1,6 @@
 import { useState } from "react";
 import {PieChart} from './PieChart.jsx'
+import { SignUpButton } from "./SignUpButton.jsx";
 import './Calculator.css'
 
 export function Calculator({income}){
@@ -42,6 +43,7 @@ const [budget, setBudget] = useState({ needs: 0, wants: 0, savings: 0});
 
         <PieChart budget={budget} />
         </div>
+        <SignUpButton />
         </>
     )
 }
