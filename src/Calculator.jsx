@@ -1,6 +1,7 @@
 import { useState } from "react";
 import {PieChart} from './PieChart.jsx'
 import { SignUpButton } from "./SignUpButton.jsx";
+
 import './Calculator.css'
 
 export function Calculator({income}){

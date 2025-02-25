@@ -1,16 +1,12 @@
-import { NavLink, Link } from "react-router-dom";
-import { BrowserRouter, Routes, Route } from "react-router-dom";
+import { useNavigate } from "react-router-dom"
 
 export function SignUpButton() {
-
+    const navigate = useNavigate();
     const handleButtonClick = () => {
+        navigate("./pages/UserDashboard")
+            
        
-            <Routes>
-            <NavLink to="/pages/UserDashboard.jsx">
-            </NavLink>
-            </Routes>
-       
-        }
+    }
        
 
     return (
