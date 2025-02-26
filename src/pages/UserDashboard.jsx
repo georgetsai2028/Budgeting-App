@@ -1,8 +1,6 @@
-import { Link } from 'react-router-dom';
-//import { Outlet } from "react-router-dom";
 
-export const UserDashboard = () => {
 
+export function UserDashboard() {
 
     return (
 
@@ -13,4 +11,6 @@ export const UserDashboard = () => {
     );
     
 };
+
+
 

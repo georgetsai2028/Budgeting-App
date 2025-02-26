@@ -10,7 +10,7 @@ export default function App() {
     <BrowserRouter>
     <Routes>
       <Route index element={<Calculator/>}/>
-      <Route path="./pages/UserDashoard" element={<UserDashboard/>} />
+      <Route path="/user-dashboard" element={<UserDashboard/>} />
     </Routes>
     </BrowserRouter>
   );

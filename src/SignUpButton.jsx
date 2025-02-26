@@ -1,9 +1,9 @@
-import { useNavigate } from "react-router-dom"
+import { useNavigate } from "react-router-dom";
 
 export function SignUpButton() {
     const navigate = useNavigate();
     const handleButtonClick = () => {
-        navigate("./pages/UserDashboard")
+        navigate("/user-dashboard")
             
        
     }
