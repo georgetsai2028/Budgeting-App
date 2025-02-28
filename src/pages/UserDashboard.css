@@ -1,11 +1,6 @@
-html, body #root{
-    margin:0;
-    height: 100%;
-    padding: 0;
-    display: flex;
-}
 
-.mainContainer {
+
+.userdashboardContainer {
     display: flex;
     justify-content: center;
     width: 100%;
@@ -20,8 +15,12 @@ html, body #root{
     grid-template-columns: 50px 50px;
     grid-template-rows: 50px 50px;
     color: darkmagenta;
-    
-    border: 1px solid pink;
+}
+
+.item{
+    border: 1px solid green;
+    text-align: center;
+    grid-area: auto;
 }
 
 #purchaseTracker{

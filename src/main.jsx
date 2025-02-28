@@ -5,6 +5,7 @@ import './index.css'
 import {Calculator} from './Calculator.jsx'
 import { UserDashboard } from './pages/UserDashboard.jsx'
 
+
 export default function App() {
   return (
     <BrowserRouter>
@@ -16,10 +17,10 @@ export default function App() {
   );
 }
 
-const root = document.getElementById("root");
+
 
 createRoot(document.getElementById('root')).render(
   <StrictMode>
   <App />
-  </StrictMode>,
+  </StrictMode>
 )
