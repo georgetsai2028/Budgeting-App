@@ -10,6 +10,9 @@ export function UserDashboard() {
 
     return (
         <>
+            <div className="sidebard">
+                <h1>Hey! user</h1>
+            </div>
             <div className="mainContainer">
             <header>
                 Hey User!

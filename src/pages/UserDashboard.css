@@ -5,27 +5,44 @@ html, body #root{
     display: flex;
 }
 
-
+.mainContainer {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    height: 100%;
+    flex-direction: column;
+}
 .gridContainer{
     width: 100%;
     height: 100%;
     display: grid;
-
+    gap: 12px;
     
-    border: 1px solid black;
+    border: 1px solid pink;
 }
 
 #purchaseTracker{
     grid-row: 1 / 3;
-    grid-column: 2 / 3;
+    grid-column: 1 / 2;
+    
 }
 
 #piggybank {
     grid-row: 1 / 3;
-    grid-column: 4 / 5;
+    grid-column: 3 / 4;
 }
 
 #investments {
     grid-row: 1 / 3;
-    grid-column: 6 / 7;
+    grid-column: 5 / 6;
+}
+
+#barChart{
+    grid-row: 4 / 7;
+    grid-column: 1 / 4;
+}
+
+#score{
+    grid-row: 4 / 7;
+    grid-column: 4 /6;
 }
