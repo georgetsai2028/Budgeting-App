@@ -9,8 +9,11 @@ export function UserDashboard() {
 
 
     return (
-        <>
-        </>
+        <div className="mainContainer">
+            <div className="gridContainer">
+                
+            </div>
+        </div>
     );
     
 };
