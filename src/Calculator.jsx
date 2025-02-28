@@ -43,8 +43,9 @@ const [budget, setBudget] = useState({ needs: 0, wants: 0, savings: 0});
         <p>Savings: ${budget.savings.toFixed(2)}</p>
 
         <PieChart budget={budget} />
-        </div>
         <SignUpButton />
+        </div>
+        
         </>
     )
 }
