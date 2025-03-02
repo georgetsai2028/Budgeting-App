@@ -44,6 +44,8 @@ html, body, #root{
 }
 
 .sidebar{
+    display: flex;
+    justify-content: center;
     width: 300px;
 }
 .gridContainer{
@@ -51,8 +53,8 @@ html, body, #root{
     height: 100%;
     display: grid;
     gap: 12px;
-    grid-template-columns: 200px 200px 200px;
-    grid-template-rows: 200px 200px 200px;
+    grid-template-columns: 375px 375px 375px;
+    grid-template-rows: 250px 250px 250px;
     
     
 }
