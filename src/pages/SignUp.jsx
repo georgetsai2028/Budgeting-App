@@ -1,10 +1,38 @@
 
 import './SignUp.css';
 
-export function SignUp(){
+import user_icon from "../assets/user.png";
+import email_icon from "../assets/mail.png";
+import password_icon from "../assets/padlock.png";
 
+const SignUp = () => {
+    return(
+        <div className="signUpContainer">
 
-    return (
-        <p>Hello</p>
+            <div className="signUpHeader">
+                <div className="signUpText">Sign Up</div>
+                <div className="signUpUnderline"></div>
+                </div>
+
+                <div className="signUpInputsContainer">
+
+                <div className="signUpInput">
+                    <img src={user_icon} alt="" />
+                    <input type="text"/>
+                </div>
+                <div className="signUpInput">
+                    <img src={email_icon} alt="" />
+                    <input type="email"/>
+                </div>
+                <div className="signUpInput">
+                    <img src={password_icon} alt="" />
+                    <input type="password"/>
+                </div>
+                
+                </div>
+
+            </div>
+
+        
     )
 }
