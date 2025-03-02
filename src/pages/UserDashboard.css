@@ -13,6 +13,7 @@ html, body, #root{
 .userdashboardRoot{
     display: flex;
     background-color: pink;
+    height: 100%;
 }
 .userdashboardContainer {
     display: flex;
