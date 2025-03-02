@@ -8,13 +8,12 @@ export function UserDashboard() {
     return (
         <>
             <div className="userdashboardRoot">
+            
             <div className="sidebar">
                 <h1>Hey! user</h1>
             </div>
             <div className="userdashboardContainer">
-            <header>
-                Hey User!
-            </header>
+    
             <div className="gridContainer">
                 <div className = "item" id="purchaseTracker">Track your purchases!</div>
                 <div className = "item" id="piggybank">Piggybank</div>
