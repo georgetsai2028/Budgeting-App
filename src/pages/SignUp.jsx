@@ -5,7 +5,7 @@ import user_icon from "../assets/user.png";
 import email_icon from "../assets/mail.png";
 import password_icon from "../assets/padlock.png";
 
-const SignUp = () => {
+export const SignUp = () => {
     return(
         <div className="signUpContainer">
 
