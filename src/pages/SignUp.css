@@ -131,6 +131,10 @@ img {
     cursor: pointer;
   }
 
+  .gray{
+    background-color: #535bf2;
+    color: #1a1a1a;
+  }
   span:hover {
     border-color: #535bf2;
   }

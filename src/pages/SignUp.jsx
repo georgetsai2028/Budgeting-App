@@ -1,4 +1,5 @@
 import { useNavigate } from 'react-router-dom';
+import { useState } from 'react';
 
 import './SignUp.css';
 
@@ -7,11 +8,13 @@ import email_icon from "../assets/mail.png";
 import password_icon from "../assets/padlock.png";
 
 export const SignUp = () => {
+    
+    const [action, setAction] = useState("Sign Up");
     return(
         <div className="signUpContainer">
 
             <div className="signUpHeader">
-                <div className="signUpText">Sign Up</div>
+                <div className="signUpText">{action}</div>
                 <div className="signUpUnderline"></div>
                 </div>
 
@@ -31,10 +34,9 @@ export const SignUp = () => {
                 </div>
                 <div className="forgotPassword">Forgot Password? <span>Click Here!</span></div>
                 <div className='submitContainer'>
-                    <div className="submit"> Sign Up</div>
-                    <div className="submit"> Login</div>
+                    <div className={action === "Sign Up" ? "submit gray" : "submit"} onClick={()=>{setAction("Sign Up")}}> Sign Up</div>
+                    <div className={action === "Login" ? "submit gray" :"submit" } onClick={()=>{setAction("Login")}}> Login</div>
                 </div>
-
                 </div>
 
             </div>
