@@ -3,7 +3,7 @@ import { useNavigate } from "react-router-dom";
 export function SignUpButton() {
     const navigate = useNavigate();
     const handleButtonClick = () => {
-        navigate("/user-dashboard")
+        navigate("/sign-up")
             
        
     }
