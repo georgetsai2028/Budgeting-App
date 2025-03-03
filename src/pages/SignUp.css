@@ -18,10 +18,11 @@
     margin: auto;
     margin-top: 200px;
     padding-bottom: 30px;
+    background-color: wheat;
 }
 img {
-    height: 100px;
-    width: 100px;
+    height: 50px;
+    width: 50px;
 }
 .signUpHeader{
     display: flex;
@@ -55,12 +56,44 @@ img {
    
     min-height: 100vh;
   }
+
+  .signUpText{
+    color: #535bf2;
+    font-size: 48px;
+    font-weight: 700;
+    
+  }
   
   h1 {
     font-size: 3.2em;
     line-height: 1.1;
   }
   
+  .signUpInputsContainer{
+    margin-top: 55px;
+    display: flex;
+    flex-direction: column;
+    gap: 25px
+  }
+
+  .signUpInput{
+    display: flex;
+    align-items: center;
+    margin: auto;
+    width: 480px;
+    height: 80px;
+    background-color: white;
+    border-radius: 6px;
+  }
+
+  .signUpInput img{
+    margin: 0px 30px;
+  }
+
+  .signUpInput input{
+    background: transparent;
+    color: #1a1a1a;
+  }
   button {
     border-radius: 8px;
     border: 1px solid transparent;
