@@ -18,7 +18,8 @@
     margin: auto;
     margin-top: 200px;
     padding-bottom: 30px;
-    background-color: wheat;
+    background-color: #1a1a1a;
+    width: 600px;
 }
 img {
     height: 50px;
@@ -63,6 +64,7 @@ img {
     font-weight: 700;
     
   }
+
   
   h1 {
     font-size: 3.2em;
@@ -83,7 +85,7 @@ img {
     width: 480px;
     height: 80px;
     background-color: white;
-    border-radius: 6px;
+    border-radius: 12px;
   }
 
   .signUpInput img{
@@ -93,7 +95,46 @@ img {
   .signUpInput input{
     background: transparent;
     color: #1a1a1a;
+    font-size: 19px;
+    border-radius: 3px;
   }
+
+  .forgotPassword{
+    padding-left: 62px;
+    margin-top: 27px;
+    color: white;
+    font-size: 18px;
+  }
+
+  .forgotPassword span{
+    color: #747bff;
+    cursor: pointer;
+  }
+
+  .submitContainer{
+    display: flex;
+    gap:30px;
+    margin: 60px auto;
+  }
+
+  .submit{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 220px;
+    height: 60px;
+    color: #1a1a1a;
+    font-weight: 700;
+    background-color:whitesmoke;
+    border-radius: 50px;
+    font-size: 20px;
+    cursor: pointer;
+  }
+
+  span:hover {
+    border-color: #535bf2;
+  }
+
   button {
     border-radius: 8px;
     border: 1px solid transparent;
@@ -105,6 +146,8 @@ img {
     cursor: pointer;
     transition: border-color 0.25s;
   }
+
+
   button:hover {
     border-color: #646cff;
   }
