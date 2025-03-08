@@ -39,3 +39,27 @@ router.post('/login', async(req, res) => {
 
     res.json({ token });
 });
+
+//Protect routes with JWT verification middleware
+const authenticateJWT = (req, res, next) => {
+    const token = req.header('Authorization')?.split(' ')[1];//bearer token
+
+    if (!token) {
+        return res.status(403).send('Access Denied');
+    }
+
+    jwt.verify(token, 'jwt_secret', (err, user) => {
+        if (err) {
+            return res.status(403).send("Invalid Token");
+
+        }
+        req.user = user; //attaches user info to req
+        next();
+    });
+}
+
+router.get('/protected', authenticateJWT, (req, res) => {
+    res.send('This is a protected route');
+});
+
+module.exports = router;
