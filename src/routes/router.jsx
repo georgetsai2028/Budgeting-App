@@ -1,4 +1,4 @@
-import {
+/*import {
   createBrowserRouter,
   createRoutesFromElements,
   Route,
@@ -12,3 +12,4 @@ export const router = createBrowserRouter(
     ))
   )
 );
+*/
