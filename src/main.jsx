@@ -9,6 +9,7 @@ import { UserDashboard } from './pages/UserDashboard.jsx'
 import { SignUp } from './pages/SignUp.jsx'
 
 export default function App() {
+
   //waits for axios to fetch array containing fruits and stores in res variable
   const fetchAPI = async () => {
     const response = await axios.get("http://localhost:8080/api");
